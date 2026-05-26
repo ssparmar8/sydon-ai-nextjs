@@ -1,0 +1,12 @@
+{
+  "BaseTemplate": {
+    "main_navigation_label": "Main navigation"
+  },
+  "SignIn": {
+    "meta_title": "Sign in",
+    "meta_description": "Sign in to your account."
+  },
+  "Dashboard": {
+    "meta_title": "Dashboard"
+  }
+}
