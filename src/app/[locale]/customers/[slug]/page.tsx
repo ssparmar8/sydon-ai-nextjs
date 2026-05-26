@@ -179,9 +179,7 @@ export default async function CustomerPage(props: Props) {
       </section>
 
       <section className="page-section">
-        <div
-          style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16, marginBottom: 64 }}
-        >
+        <div className="stats-3col" style={{ marginBottom: 64 }}>
           {[
             { label: 'Industry', value: c.industry },
             { label: 'Company size', value: c.size },

@@ -136,6 +136,18 @@
   gap: 20px;
 }
 
+.stats-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.members-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
 .feature-card {
   background: var(--bg-3);
   border: 1px solid var(--line);
@@ -1152,6 +1164,12 @@
     grid-template-columns: 1fr;
   }
   .feature-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .stats-3col {
+    grid-template-columns: 1fr;
+  }
+  .members-2col {
     grid-template-columns: 1fr;
   }
   .blog-grid {

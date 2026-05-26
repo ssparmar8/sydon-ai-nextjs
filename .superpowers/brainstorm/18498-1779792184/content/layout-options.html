@@ -2,161 +2,614 @@
 <p class="subtitle">Same content, same brand colors — different page structure and visual weight</p>
 
 <div class="cards">
-
   <!-- Option A: Dark Hero, Light Sections -->
   <div class="card" data-choice="dark-hero" onclick="toggleSelect(this)">
-    <div class="card-image" style="border-radius:8px;overflow:hidden;min-height:200px;font-family:system-ui,sans-serif">
+    <div
+      class="card-image"
+      style="
+        border-radius: 8px;
+        overflow: hidden;
+        min-height: 200px;
+        font-family: system-ui, sans-serif;
+      "
+    >
       <!-- Nav -->
-      <div style="background:#0a1628;padding:8px 16px;display:flex;justify-content:space-between;align-items:center">
-        <div style="display:flex;align-items:center;gap:6px">
-          <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M16 4 L22 12 L16 16 L10 12Z" fill="#00d4ff"/><path d="M22 12 L28 20 L16 20 L16 16Z" fill="#4299e1"/><path d="M16 20 L16 28 L10 20 L16 16Z" fill="#2d5aa0"/><path d="M10 20 L4 12 L10 12 L16 16Z" fill="#4299e1"/></svg>
-          <span style="color:#fff;font-weight:700;font-size:11px">sydon</span>
+      <div
+        style="
+          background: #0a1628;
+          padding: 8px 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div style="display: flex; align-items: center; gap: 6px">
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4 L22 12 L16 16 L10 12Z" fill="#00d4ff" />
+            <path d="M22 12 L28 20 L16 20 L16 16Z" fill="#4299e1" />
+            <path d="M16 20 L16 28 L10 20 L16 16Z" fill="#2d5aa0" />
+            <path d="M10 20 L4 12 L10 12 L16 16Z" fill="#4299e1" />
+          </svg>
+          <span style="color: #fff; font-weight: 700; font-size: 11px">sydon</span>
         </div>
-        <div style="display:flex;gap:10px">
-          <span style="color:#a0aec0;font-size:9px">Agents</span>
-          <span style="color:#a0aec0;font-size:9px">Pricing</span>
-          <span style="background:linear-gradient(135deg,#00d4ff,#4299e1);color:#fff;font-size:9px;padding:3px 8px;border-radius:4px;font-weight:600">Start Free</span>
+        <div style="display: flex; gap: 10px">
+          <span style="color: #a0aec0; font-size: 9px">Agents</span>
+          <span style="color: #a0aec0; font-size: 9px">Pricing</span>
+          <span
+            style="
+              background: linear-gradient(135deg, #00d4ff, #4299e1);
+              color: #fff;
+              font-size: 9px;
+              padding: 3px 8px;
+              border-radius: 4px;
+              font-weight: 600;
+            "
+            >Start Free</span
+          >
         </div>
       </div>
       <!-- Hero Dark -->
-      <div style="background:linear-gradient(160deg,#0a1628 0%,#1a365d 60%,#0d2040 100%);padding:20px 16px;text-align:center">
-        <div style="display:inline-block;background:rgba(66,153,225,0.15);border:1px solid rgba(0,212,255,0.3);color:#00d4ff;font-size:8px;padding:2px 8px;border-radius:20px;margin-bottom:8px">10 AI Agents. One Platform.</div>
-        <div style="color:#fff;font-size:15px;font-weight:800;line-height:1.3;margin-bottom:6px">Everything your Amazon<br>business needs.</div>
-        <div style="color:#7fb3d3;font-size:8px;margin-bottom:10px">AI agents that act — not just alert</div>
-        <div style="display:flex;gap:6px;justify-content:center">
-          <button style="background:linear-gradient(135deg,#00d4ff,#4299e1);color:#fff;border:none;padding:6px 12px;border-radius:5px;font-size:9px;font-weight:700;cursor:pointer">Start Free</button>
-          <button style="background:transparent;color:#a0c4e8;border:1px solid rgba(66,153,225,0.4);padding:6px 12px;border-radius:5px;font-size:9px;cursor:pointer">See Agents →</button>
+      <div
+        style="
+          background: linear-gradient(160deg, #0a1628 0%, #1a365d 60%, #0d2040 100%);
+          padding: 20px 16px;
+          text-align: center;
+        "
+      >
+        <div
+          style="
+            display: inline-block;
+            background: rgba(66, 153, 225, 0.15);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            color: #00d4ff;
+            font-size: 8px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+          "
+        >
+          10 AI Agents. One Platform.
+        </div>
+        <div
+          style="
+            color: #fff;
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 6px;
+          "
+        >
+          Everything your Amazon<br />business needs.
+        </div>
+        <div style="color: #7fb3d3; font-size: 8px; margin-bottom: 10px">
+          AI agents that act — not just alert
+        </div>
+        <div style="display: flex; gap: 6px; justify-content: center">
+          <button
+            style="
+              background: linear-gradient(135deg, #00d4ff, #4299e1);
+              color: #fff;
+              border: none;
+              padding: 6px 12px;
+              border-radius: 5px;
+              font-size: 9px;
+              font-weight: 700;
+              cursor: pointer;
+            "
+          >
+            Start Free
+          </button>
+          <button
+            style="
+              background: transparent;
+              color: #a0c4e8;
+              border: 1px solid rgba(66, 153, 225, 0.4);
+              padding: 6px 12px;
+              border-radius: 5px;
+              font-size: 9px;
+              cursor: pointer;
+            "
+          >
+            See Agents →
+          </button>
         </div>
       </div>
       <!-- Agent Pills Row -->
-      <div style="background:#f8fafc;padding:8px 16px;display:flex;gap:4px;flex-wrap:wrap">
-        <span style="background:#eff6ff;color:#2563eb;font-size:7px;padding:2px 6px;border-radius:10px;border:1px solid #bfdbfe">Account Guardian</span>
-        <span style="background:#eff6ff;color:#2563eb;font-size:7px;padding:2px 6px;border-radius:10px;border:1px solid #bfdbfe">PPC Strategist</span>
-        <span style="background:#eff6ff;color:#2563eb;font-size:7px;padding:2px 6px;border-radius:10px;border:1px solid #bfdbfe">Profit Intel</span>
-        <span style="background:#fff7ed;color:#c2410c;font-size:7px;padding:2px 6px;border-radius:10px;border:1px solid #fed7aa">Dynamic Pricer</span>
-        <span style="color:#94a3b8;font-size:7px;padding:2px 6px">+6 more</span>
+      <div style="background: #f8fafc; padding: 8px 16px; display: flex; gap: 4px; flex-wrap: wrap">
+        <span
+          style="
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 7px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            border: 1px solid #bfdbfe;
+          "
+          >Account Guardian</span
+        >
+        <span
+          style="
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 7px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            border: 1px solid #bfdbfe;
+          "
+          >PPC Strategist</span
+        >
+        <span
+          style="
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 7px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            border: 1px solid #bfdbfe;
+          "
+          >Profit Intel</span
+        >
+        <span
+          style="
+            background: #fff7ed;
+            color: #c2410c;
+            font-size: 7px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            border: 1px solid #fed7aa;
+          "
+          >Dynamic Pricer</span
+        >
+        <span style="color: #94a3b8; font-size: 7px; padding: 2px 6px">+6 more</span>
       </div>
       <!-- Pricing teaser -->
-      <div style="background:#f8fafc;padding:8px 16px;display:flex;gap:6px;border-top:1px solid #e2e8f0">
-        <div style="flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:6px;text-align:center">
-          <div style="color:#0f172a;font-size:10px;font-weight:700">Free</div>
-          <div style="color:#64748b;font-size:7px">$0 forever</div>
+      <div
+        style="
+          background: #f8fafc;
+          padding: 8px 16px;
+          display: flex;
+          gap: 6px;
+          border-top: 1px solid #e2e8f0;
+        "
+      >
+        <div
+          style="
+            flex: 1;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 6px;
+            text-align: center;
+          "
+        >
+          <div style="color: #0f172a; font-size: 10px; font-weight: 700">Free</div>
+          <div style="color: #64748b; font-size: 7px">$0 forever</div>
         </div>
-        <div style="flex:1;background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #4299e1;border-radius:6px;padding:6px;text-align:center">
-          <div style="color:#1a365d;font-size:10px;font-weight:700">$149/mo</div>
-          <div style="color:#2563eb;font-size:7px">Individual ★</div>
+        <div
+          style="
+            flex: 1;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border: 1px solid #4299e1;
+            border-radius: 6px;
+            padding: 6px;
+            text-align: center;
+          "
+        >
+          <div style="color: #1a365d; font-size: 10px; font-weight: 700">$149/mo</div>
+          <div style="color: #2563eb; font-size: 7px">Individual ★</div>
         </div>
-        <div style="flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:6px;text-align:center">
-          <div style="color:#0f172a;font-size:10px;font-weight:700">$699/mo</div>
-          <div style="color:#64748b;font-size:7px">Agency</div>
+        <div
+          style="
+            flex: 1;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 6px;
+            text-align: center;
+          "
+        >
+          <div style="color: #0f172a; font-size: 10px; font-weight: 700">$699/mo</div>
+          <div style="color: #64748b; font-size: 7px">Agency</div>
         </div>
       </div>
     </div>
     <div class="card-body">
       <h3>A — Dark Hero + Light Body</h3>
-      <p>Dramatic dark navy hero section fades into clean white content. High-impact first impression with easy-to-read feature sections. Most popular for AI/SaaS products.</p>
+      <p>
+        Dramatic dark navy hero section fades into clean white content. High-impact first impression
+        with easy-to-read feature sections. Most popular for AI/SaaS products.
+      </p>
     </div>
   </div>
 
   <!-- Option B: Full Dark -->
   <div class="card" data-choice="full-dark" onclick="toggleSelect(this)">
-    <div class="card-image" style="border-radius:8px;overflow:hidden;min-height:200px;font-family:system-ui,sans-serif;background:#060e1d">
+    <div
+      class="card-image"
+      style="
+        border-radius: 8px;
+        overflow: hidden;
+        min-height: 200px;
+        font-family: system-ui, sans-serif;
+        background: #060e1d;
+      "
+    >
       <!-- Nav -->
-      <div style="padding:8px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.06)">
-        <div style="display:flex;align-items:center;gap:6px">
-          <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M16 4 L22 12 L16 16 L10 12Z" fill="#00d4ff"/><path d="M22 12 L28 20 L16 20 L16 16Z" fill="#4299e1"/><path d="M16 20 L16 28 L10 20 L16 16Z" fill="#2d5aa0"/><path d="M10 20 L4 12 L10 12 L16 16Z" fill="#4299e1"/></svg>
-          <span style="color:#fff;font-weight:700;font-size:11px">sydon</span>
+      <div
+        style="
+          padding: 8px 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        "
+      >
+        <div style="display: flex; align-items: center; gap: 6px">
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4 L22 12 L16 16 L10 12Z" fill="#00d4ff" />
+            <path d="M22 12 L28 20 L16 20 L16 16Z" fill="#4299e1" />
+            <path d="M16 20 L16 28 L10 20 L16 16Z" fill="#2d5aa0" />
+            <path d="M10 20 L4 12 L10 12 L16 16Z" fill="#4299e1" />
+          </svg>
+          <span style="color: #fff; font-weight: 700; font-size: 11px">sydon</span>
         </div>
-        <div style="display:flex;gap:10px;align-items:center">
-          <span style="color:#64748b;font-size:9px">Agents</span>
-          <span style="color:#64748b;font-size:9px">Pricing</span>
-          <span style="background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.3);color:#00d4ff;font-size:9px;padding:3px 8px;border-radius:4px;font-weight:600">Start Free</span>
+        <div style="display: flex; gap: 10px; align-items: center">
+          <span style="color: #64748b; font-size: 9px">Agents</span>
+          <span style="color: #64748b; font-size: 9px">Pricing</span>
+          <span
+            style="
+              background: rgba(0, 212, 255, 0.1);
+              border: 1px solid rgba(0, 212, 255, 0.3);
+              color: #00d4ff;
+              font-size: 9px;
+              padding: 3px 8px;
+              border-radius: 4px;
+              font-weight: 600;
+            "
+            >Start Free</span
+          >
         </div>
       </div>
       <!-- Hero Full Dark -->
-      <div style="padding:20px 16px;text-align:center;position:relative">
-        <div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);width:120px;height:60px;background:radial-gradient(ellipse,rgba(0,212,255,0.15),transparent);pointer-events:none"></div>
-        <div style="color:#4299e1;font-size:8px;letter-spacing:2px;font-weight:600;margin-bottom:6px;text-transform:uppercase">Amazon AI Platform</div>
-        <div style="color:#fff;font-size:14px;font-weight:800;line-height:1.3;margin-bottom:6px">Everything your Amazon<br/>business needs.</div>
-        <div style="color:#475569;font-size:8px;margin-bottom:10px">One platform that actually does the work</div>
-        <button style="background:linear-gradient(135deg,#00d4ff,#2d5aa0);color:#fff;border:none;padding:7px 14px;border-radius:5px;font-size:9px;font-weight:700;cursor:pointer">Start Free — No Credit Card</button>
+      <div style="padding: 20px 16px; text-align: center; position: relative">
+        <div
+          style="
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 60px;
+            background: radial-gradient(ellipse, rgba(0, 212, 255, 0.15), transparent);
+            pointer-events: none;
+          "
+        ></div>
+        <div
+          style="
+            color: #4299e1;
+            font-size: 8px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+          "
+        >
+          Amazon AI Platform
+        </div>
+        <div
+          style="
+            color: #fff;
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 6px;
+          "
+        >
+          Everything your Amazon<br />business needs.
+        </div>
+        <div style="color: #475569; font-size: 8px; margin-bottom: 10px">
+          One platform that actually does the work
+        </div>
+        <button
+          style="
+            background: linear-gradient(135deg, #00d4ff, #2d5aa0);
+            color: #fff;
+            border: none;
+            padding: 7px 14px;
+            border-radius: 5px;
+            font-size: 9px;
+            font-weight: 700;
+            cursor: pointer;
+          "
+        >
+          Start Free — No Credit Card
+        </button>
       </div>
       <!-- Agent cards dark -->
-      <div style="padding:0 16px 8px;display:flex;gap:5px">
-        <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:6px">
-          <div style="color:#00d4ff;font-size:7px;font-weight:700;margin-bottom:2px">Account Guardian</div>
-          <div style="color:#475569;font-size:6px">47 risk factors. Auto protection.</div>
+      <div style="padding: 0 16px 8px; display: flex; gap: 5px">
+        <div
+          style="
+            flex: 1;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            padding: 6px;
+          "
+        >
+          <div style="color: #00d4ff; font-size: 7px; font-weight: 700; margin-bottom: 2px">
+            Account Guardian
+          </div>
+          <div style="color: #475569; font-size: 6px">47 risk factors. Auto protection.</div>
         </div>
-        <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:6px">
-          <div style="color:#4299e1;font-size:7px;font-weight:700;margin-bottom:2px">PPC Strategist</div>
-          <div style="color:#475569;font-size:6px">Pauses waste. Scales winners.</div>
+        <div
+          style="
+            flex: 1;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            padding: 6px;
+          "
+        >
+          <div style="color: #4299e1; font-size: 7px; font-weight: 700; margin-bottom: 2px">
+            PPC Strategist
+          </div>
+          <div style="color: #475569; font-size: 6px">Pauses waste. Scales winners.</div>
         </div>
-        <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:6px">
-          <div style="color:#4299e1;font-size:7px;font-weight:700;margin-bottom:2px">Profit Intel</div>
-          <div style="color:#475569;font-size:6px">Every dollar. Real time.</div>
+        <div
+          style="
+            flex: 1;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            padding: 6px;
+          "
+        >
+          <div style="color: #4299e1; font-size: 7px; font-weight: 700; margin-bottom: 2px">
+            Profit Intel
+          </div>
+          <div style="color: #475569; font-size: 6px">Every dollar. Real time.</div>
         </div>
       </div>
       <!-- Bottom bar -->
-      <div style="padding:8px 16px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center">
-        <span style="color:#475569;font-size:7px">Free forever plan available</span>
-        <span style="background:linear-gradient(135deg,#00d4ff,#4299e1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:7px;font-weight:700">$149/mo Individual</span>
+      <div
+        style="
+          padding: 8px 16px;
+          border-top: 1px solid rgba(255, 255, 255, 0.06);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <span style="color: #475569; font-size: 7px">Free forever plan available</span>
+        <span
+          style="
+            background: linear-gradient(135deg, #00d4ff, #4299e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 7px;
+            font-weight: 700;
+          "
+          >$149/mo Individual</span
+        >
       </div>
     </div>
     <div class="card-body">
       <h3>B — Full Dark Mode</h3>
-      <p>Entire page stays dark navy/black with cyan-blue glows. Premium AI aesthetic throughout. Great for standing out — but can feel heavy for long scroll pages.</p>
+      <p>
+        Entire page stays dark navy/black with cyan-blue glows. Premium AI aesthetic throughout.
+        Great for standing out — but can feel heavy for long scroll pages.
+      </p>
     </div>
   </div>
 
   <!-- Option C: Clean White + Gradient Accents -->
   <div class="card" data-choice="clean-gradient" onclick="toggleSelect(this)">
-    <div class="card-image" style="border-radius:8px;overflow:hidden;min-height:200px;font-family:system-ui,sans-serif;background:#fff">
+    <div
+      class="card-image"
+      style="
+        border-radius: 8px;
+        overflow: hidden;
+        min-height: 200px;
+        font-family: system-ui, sans-serif;
+        background: #fff;
+      "
+    >
       <!-- Nav white -->
-      <div style="padding:8px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #f1f5f9">
-        <div style="display:flex;align-items:center;gap:6px">
-          <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M16 4 L22 12 L16 16 L10 12Z" fill="#00d4ff"/><path d="M22 12 L28 20 L16 20 L16 16Z" fill="#4299e1"/><path d="M16 20 L16 28 L10 20 L16 16Z" fill="#2d5aa0"/><path d="M10 20 L4 12 L10 12 L16 16Z" fill="#4299e1"/></svg>
-          <span style="color:#0f172a;font-weight:700;font-size:11px">sydon</span>
+      <div
+        style="
+          padding: 8px 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #f1f5f9;
+        "
+      >
+        <div style="display: flex; align-items: center; gap: 6px">
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4 L22 12 L16 16 L10 12Z" fill="#00d4ff" />
+            <path d="M22 12 L28 20 L16 20 L16 16Z" fill="#4299e1" />
+            <path d="M16 20 L16 28 L10 20 L16 16Z" fill="#2d5aa0" />
+            <path d="M10 20 L4 12 L10 12 L16 16Z" fill="#4299e1" />
+          </svg>
+          <span style="color: #0f172a; font-weight: 700; font-size: 11px">sydon</span>
         </div>
-        <div style="display:flex;gap:10px;align-items:center">
-          <span style="color:#64748b;font-size:9px">Agents</span>
-          <span style="color:#64748b;font-size:9px">Pricing</span>
-          <span style="background:linear-gradient(135deg,#1a365d,#4299e1);color:#fff;font-size:9px;padding:3px 8px;border-radius:4px;font-weight:600">Start Free</span>
+        <div style="display: flex; gap: 10px; align-items: center">
+          <span style="color: #64748b; font-size: 9px">Agents</span>
+          <span style="color: #64748b; font-size: 9px">Pricing</span>
+          <span
+            style="
+              background: linear-gradient(135deg, #1a365d, #4299e1);
+              color: #fff;
+              font-size: 9px;
+              padding: 3px 8px;
+              border-radius: 4px;
+              font-weight: 600;
+            "
+            >Start Free</span
+          >
         </div>
       </div>
       <!-- Hero white with gradient blob -->
-      <div style="padding:18px 16px;text-align:center;background:linear-gradient(180deg,#f0f9ff 0%,#fff 100%)">
-        <div style="display:inline-block;background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(66,153,225,0.1));border:1px solid rgba(66,153,225,0.3);color:#1a365d;font-size:8px;padding:2px 8px;border-radius:20px;margin-bottom:8px;font-weight:600">10 AI Agents · One Platform</div>
-        <div style="color:#0f172a;font-size:15px;font-weight:800;line-height:1.3;margin-bottom:5px">Everything your Amazon<br/>business needs.</div>
-        <div style="color:#64748b;font-size:8px;margin-bottom:10px">One platform that actually does the work</div>
-        <div style="display:flex;gap:6px;justify-content:center">
-          <button style="background:linear-gradient(135deg,#1a365d,#4299e1);color:#fff;border:none;padding:6px 12px;border-radius:5px;font-size:9px;font-weight:700;cursor:pointer">Start Free</button>
-          <button style="background:#fff;color:#1a365d;border:1px solid #cbd5e1;padding:6px 12px;border-radius:5px;font-size:9px;cursor:pointer">See Agents →</button>
+      <div
+        style="
+          padding: 18px 16px;
+          text-align: center;
+          background: linear-gradient(180deg, #f0f9ff 0%, #fff 100%);
+        "
+      >
+        <div
+          style="
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(66, 153, 225, 0.1));
+            border: 1px solid rgba(66, 153, 225, 0.3);
+            color: #1a365d;
+            font-size: 8px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            font-weight: 600;
+          "
+        >
+          10 AI Agents · One Platform
+        </div>
+        <div
+          style="
+            color: #0f172a;
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 5px;
+          "
+        >
+          Everything your Amazon<br />business needs.
+        </div>
+        <div style="color: #64748b; font-size: 8px; margin-bottom: 10px">
+          One platform that actually does the work
+        </div>
+        <div style="display: flex; gap: 6px; justify-content: center">
+          <button
+            style="
+              background: linear-gradient(135deg, #1a365d, #4299e1);
+              color: #fff;
+              border: none;
+              padding: 6px 12px;
+              border-radius: 5px;
+              font-size: 9px;
+              font-weight: 700;
+              cursor: pointer;
+            "
+          >
+            Start Free
+          </button>
+          <button
+            style="
+              background: #fff;
+              color: #1a365d;
+              border: 1px solid #cbd5e1;
+              padding: 6px 12px;
+              border-radius: 5px;
+              font-size: 9px;
+              cursor: pointer;
+            "
+          >
+            See Agents →
+          </button>
         </div>
       </div>
       <!-- Feature strip -->
-      <div style="padding:8px 16px;background:#f8fafc;display:flex;gap:5px">
-        <div style="flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:5px;text-align:center">
-          <div style="width:16px;height:16px;background:linear-gradient(135deg,#00d4ff,#4299e1);border-radius:4px;margin:0 auto 3px"></div>
-          <div style="color:#0f172a;font-size:7px;font-weight:600">Account Guardian</div>
+      <div style="padding: 8px 16px; background: #f8fafc; display: flex; gap: 5px">
+        <div
+          style="
+            flex: 1;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 5px;
+            text-align: center;
+          "
+        >
+          <div
+            style="
+              width: 16px;
+              height: 16px;
+              background: linear-gradient(135deg, #00d4ff, #4299e1);
+              border-radius: 4px;
+              margin: 0 auto 3px;
+            "
+          ></div>
+          <div style="color: #0f172a; font-size: 7px; font-weight: 600">Account Guardian</div>
         </div>
-        <div style="flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:5px;text-align:center">
-          <div style="width:16px;height:16px;background:linear-gradient(135deg,#2d5aa0,#4299e1);border-radius:4px;margin:0 auto 3px"></div>
-          <div style="color:#0f172a;font-size:7px;font-weight:600">PPC Strategist</div>
+        <div
+          style="
+            flex: 1;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 5px;
+            text-align: center;
+          "
+        >
+          <div
+            style="
+              width: 16px;
+              height: 16px;
+              background: linear-gradient(135deg, #2d5aa0, #4299e1);
+              border-radius: 4px;
+              margin: 0 auto 3px;
+            "
+          ></div>
+          <div style="color: #0f172a; font-size: 7px; font-weight: 600">PPC Strategist</div>
         </div>
-        <div style="flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:5px;text-align:center">
-          <div style="width:16px;height:16px;background:linear-gradient(135deg,#1a365d,#2d5aa0);border-radius:4px;margin:0 auto 3px"></div>
-          <div style="color:#0f172a;font-size:7px;font-weight:600">Profit Intel</div>
+        <div
+          style="
+            flex: 1;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 5px;
+            text-align: center;
+          "
+        >
+          <div
+            style="
+              width: 16px;
+              height: 16px;
+              background: linear-gradient(135deg, #1a365d, #2d5aa0);
+              border-radius: 4px;
+              margin: 0 auto 3px;
+            "
+          ></div>
+          <div style="color: #0f172a; font-size: 7px; font-weight: 600">Profit Intel</div>
         </div>
-        <div style="flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:5px;text-align:center">
-          <div style="width:16px;height:16px;background:linear-gradient(135deg,#ff9900,#f97316);border-radius:4px;margin:0 auto 3px"></div>
-          <div style="color:#0f172a;font-size:7px;font-weight:600">Dynamic Pricer</div>
+        <div
+          style="
+            flex: 1;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 5px;
+            text-align: center;
+          "
+        >
+          <div
+            style="
+              width: 16px;
+              height: 16px;
+              background: linear-gradient(135deg, #ff9900, #f97316);
+              border-radius: 4px;
+              margin: 0 auto 3px;
+            "
+          ></div>
+          <div style="color: #0f172a; font-size: 7px; font-weight: 600">Dynamic Pricer</div>
         </div>
       </div>
     </div>
     <div class="card-body">
       <h3>C — Clean White + Brand Gradient</h3>
-      <p>White base with brand-colored gradient accents in the hero and key sections. Light, professional, and trustworthy. Familiar SaaS feel — easier to read on long scroll.</p>
+      <p>
+        White base with brand-colored gradient accents in the hero and key sections. Light,
+        professional, and trustworthy. Familiar SaaS feel — easier to read on long scroll.
+      </p>
     </div>
   </div>
-
 </div>

@@ -86,7 +86,7 @@ export default async function TeamPage(props: Props) {
       </section>
 
       <section className="page-section">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
+        <div className="members-2col">
           {team.members.map((m) => (
             <div
               key={m.name}

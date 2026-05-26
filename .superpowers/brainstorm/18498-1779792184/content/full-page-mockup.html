@@ -1,550 +1,1689 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Sydon AI – Landing Page Mockup</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.6}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sydon AI – Landing Page Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        background: #fff;
+        color: #0f172a;
+        line-height: 1.6;
+      }
 
-/* ---- TOKENS ---- */
-:root{
-  --navy:#1a365d;
-  --blue:#2d5aa0;
-  --sky:#4299e1;
-  --cyan:#00d4ff;
-  --orange:#ff9900;
-  --neutral-1:#f6f4f1;
-  --neutral-2:#e8e6e3;
-  --gray:#718096;
-  --text:#0f172a;
-  --muted:#475569;
-  --border:#e2e8f0;
-  --grad: linear-gradient(135deg,var(--navy),var(--sky));
-  --grad-light: linear-gradient(135deg,#f0f9ff,#fff);
-}
+      /* ---- TOKENS ---- */
+      :root {
+        --navy: #1a365d;
+        --blue: #2d5aa0;
+        --sky: #4299e1;
+        --cyan: #00d4ff;
+        --orange: #ff9900;
+        --neutral-1: #f6f4f1;
+        --neutral-2: #e8e6e3;
+        --gray: #718096;
+        --text: #0f172a;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --grad: linear-gradient(135deg, var(--navy), var(--sky));
+        --grad-light: linear-gradient(135deg, #f0f9ff, #fff);
+      }
 
-/* ---- NAV ---- */
-.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
-.nav-inner{max-width:1200px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
-.logo-text{font-weight:800;font-size:18px;color:var(--text);letter-spacing:-0.5px}
-.logo-text span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color 150ms}
-.nav-links a:hover{color:var(--navy)}
-.nav-cta{display:flex;gap:10px;align-items:center}
-.btn-ghost{padding:8px 18px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-weight:600;color:var(--navy);background:transparent;cursor:pointer;transition:all 150ms}
-.btn-ghost:hover{border-color:var(--sky);color:var(--sky)}
-.btn-primary{padding:8px 20px;border:none;border-radius:8px;font-size:14px;font-weight:700;color:#fff;background:var(--grad);cursor:pointer;transition:opacity 150ms}
-.btn-primary:hover{opacity:0.9}
+      /* ---- NAV ---- */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 0 40px;
+      }
+      .nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+      }
+      .logo-text {
+        font-weight: 800;
+        font-size: 18px;
+        color: var(--text);
+        letter-spacing: -0.5px;
+      }
+      .logo-text span {
+        background: var(--grad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 150ms;
+      }
+      .nav-links a:hover {
+        color: var(--navy);
+      }
+      .nav-cta {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .btn-ghost {
+        padding: 8px 18px;
+        border: 1.5px solid var(--border);
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--navy);
+        background: transparent;
+        cursor: pointer;
+        transition: all 150ms;
+      }
+      .btn-ghost:hover {
+        border-color: var(--sky);
+        color: var(--sky);
+      }
+      .btn-primary {
+        padding: 8px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        background: var(--grad);
+        cursor: pointer;
+        transition: opacity 150ms;
+      }
+      .btn-primary:hover {
+        opacity: 0.9;
+      }
 
-/* ---- HERO ---- */
-.hero{padding:80px 40px 60px;text-align:center;background:linear-gradient(180deg,#f0f9ff 0%,#fff 100%);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(0,212,255,0.12),transparent 70%);pointer-events:none}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(66,153,225,0.1);border:1px solid rgba(66,153,225,0.3);color:var(--navy);font-size:13px;font-weight:600;padding:5px 14px;border-radius:999px;margin-bottom:24px}
-.hero-badge-dot{width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.hero h1{font-size:clamp(36px,5vw,60px);font-weight:800;line-height:1.15;letter-spacing:-1.5px;color:var(--text);max-width:760px;margin:0 auto 20px}
-.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-sub{font-size:18px;color:var(--muted);max-width:560px;margin:0 auto 36px;line-height:1.7}
-.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
-.hero-ctas .btn-primary{padding:14px 28px;font-size:16px;border-radius:10px}
-.hero-ctas .btn-ghost{padding:14px 28px;font-size:16px;border-radius:10px}
-.hero-note{font-size:12px;color:var(--gray);margin-top:-28px;margin-bottom:40px}
-.hero-tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.tag{background:#f8fafc;border:1px solid var(--border);color:var(--muted);font-size:12px;font-weight:500;padding:5px 12px;border-radius:999px}
+      /* ---- HERO ---- */
+      .hero {
+        padding: 80px 40px 60px;
+        text-align: center;
+        background: linear-gradient(180deg, #f0f9ff 0%, #fff 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        height: 300px;
+        background: radial-gradient(ellipse, rgba(0, 212, 255, 0.12), transparent 70%);
+        pointer-events: none;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(66, 153, 225, 0.1);
+        border: 1px solid rgba(66, 153, 225, 0.3);
+        color: var(--navy);
+        font-size: 13px;
+        font-weight: 600;
+        padding: 5px 14px;
+        border-radius: 999px;
+        margin-bottom: 24px;
+      }
+      .hero-badge-dot {
+        width: 6px;
+        height: 6px;
+        background: var(--cyan);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+      .hero h1 {
+        font-size: clamp(36px, 5vw, 60px);
+        font-weight: 800;
+        line-height: 1.15;
+        letter-spacing: -1.5px;
+        color: var(--text);
+        max-width: 760px;
+        margin: 0 auto 20px;
+      }
+      .hero h1 .grad {
+        background: var(--grad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-sub {
+        font-size: 18px;
+        color: var(--muted);
+        max-width: 560px;
+        margin: 0 auto 36px;
+        line-height: 1.7;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+      .hero-ctas .btn-primary {
+        padding: 14px 28px;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+      .hero-ctas .btn-ghost {
+        padding: 14px 28px;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+      .hero-note {
+        font-size: 12px;
+        color: var(--gray);
+        margin-top: -28px;
+        margin-bottom: 40px;
+      }
+      .hero-tags {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .tag {
+        background: #f8fafc;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 500;
+        padding: 5px 12px;
+        border-radius: 999px;
+      }
 
-/* ---- SECTION COMMON ---- */
-.section{padding:80px 40px}
-.section-inner{max-width:1200px;margin:0 auto}
-.section-label{display:inline-block;background:rgba(66,153,225,0.1);border:1px solid rgba(66,153,225,0.25);color:var(--blue);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin-bottom:16px}
-.section-title{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-1px;color:var(--text);line-height:1.2;margin-bottom:14px}
-.section-sub{font-size:17px;color:var(--muted);max-width:520px;line-height:1.7}
-.section-header{margin-bottom:52px}
-.section-header.center{text-align:center}
-.section-header.center .section-sub{margin:0 auto}
+      /* ---- SECTION COMMON ---- */
+      .section {
+        padding: 80px 40px;
+      }
+      .section-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-label {
+        display: inline-block;
+        background: rgba(66, 153, 225, 0.1);
+        border: 1px solid rgba(66, 153, 225, 0.25);
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 999px;
+        margin-bottom: 16px;
+      }
+      .section-title {
+        font-size: clamp(28px, 4vw, 42px);
+        font-weight: 800;
+        letter-spacing: -1px;
+        color: var(--text);
+        line-height: 1.2;
+        margin-bottom: 14px;
+      }
+      .section-sub {
+        font-size: 17px;
+        color: var(--muted);
+        max-width: 520px;
+        line-height: 1.7;
+      }
+      .section-header {
+        margin-bottom: 52px;
+      }
+      .section-header.center {
+        text-align: center;
+      }
+      .section-header.center .section-sub {
+        margin: 0 auto;
+      }
 
-/* ---- AGENTS OVERVIEW ---- */
-.agents-overview{background:#f8fafc}
-.agents-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.agent-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;transition:all 200ms;cursor:pointer}
-.agent-card:hover{border-color:var(--sky);box-shadow:0 4px 20px rgba(66,153,225,0.12);transform:translateY(-2px)}
-.agent-icon{width:36px;height:36px;border-radius:8px;margin-bottom:12px;display:flex;align-items:center;justify-content:center}
-.agent-card h4{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
-.agent-card p{font-size:12px;color:var(--muted);line-height:1.5}
-.agent-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:999px;margin-top:8px}
+      /* ---- AGENTS OVERVIEW ---- */
+      .agents-overview {
+        background: #f8fafc;
+      }
+      .agents-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+      }
+      .agent-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+        transition: all 200ms;
+        cursor: pointer;
+      }
+      .agent-card:hover {
+        border-color: var(--sky);
+        box-shadow: 0 4px 20px rgba(66, 153, 225, 0.12);
+        transform: translateY(-2px);
+      }
+      .agent-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .agent-card h4 {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .agent-card p {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .agent-tag {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 2px 8px;
+        border-radius: 999px;
+        margin-top: 8px;
+      }
 
-/* ---- FEATURED AGENTS ---- */
-.featured-agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
-.featured-card{border:1px solid var(--border);border-radius:16px;padding:28px;transition:all 200ms}
-.featured-card:hover{box-shadow:0 8px 32px rgba(26,54,93,0.08)}
-.featured-card .icon-lg{width:48px;height:48px;border-radius:12px;margin-bottom:18px;display:flex;align-items:center;justify-content:center}
-.featured-card h3{font-size:20px;font-weight:800;margin-bottom:8px}
-.featured-card p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px}
-.featured-card ul{list-style:none;display:flex;flex-direction:column;gap:6px}
-.featured-card ul li{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px}
-.check{width:16px;height:16px;background:rgba(16,185,129,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+      /* ---- FEATURED AGENTS ---- */
+      .featured-agents {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+      }
+      .featured-card {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 28px;
+        transition: all 200ms;
+      }
+      .featured-card:hover {
+        box-shadow: 0 8px 32px rgba(26, 54, 93, 0.08);
+      }
+      .featured-card .icon-lg {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .featured-card h3 {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      .featured-card p {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+      .featured-card ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .featured-card ul li {
+        font-size: 13px;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .check {
+        width: 16px;
+        height: 16px;
+        background: rgba(16, 185, 129, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
 
-/* ---- HOW IT WORKS ---- */
-.steps{background:linear-gradient(135deg,#f0f9ff,#fff)}
-.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
-.steps-grid::before{content:'';position:absolute;top:28px;left:calc(16.6% + 16px);right:calc(16.6% + 16px);height:2px;background:linear-gradient(90deg,var(--sky),var(--cyan));opacity:0.3}
-.step{text-align:center}
-.step-num{width:56px;height:56px;border-radius:50%;background:var(--grad);color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
-.step h4{font-size:16px;font-weight:700;margin-bottom:8px}
-.step p{font-size:14px;color:var(--muted);line-height:1.6}
+      /* ---- HOW IT WORKS ---- */
+      .steps {
+        background: linear-gradient(135deg, #f0f9ff, #fff);
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        position: relative;
+      }
+      .steps-grid::before {
+        content: '';
+        position: absolute;
+        top: 28px;
+        left: calc(16.6% + 16px);
+        right: calc(16.6% + 16px);
+        height: 2px;
+        background: linear-gradient(90deg, var(--sky), var(--cyan));
+        opacity: 0.3;
+      }
+      .step {
+        text-align: center;
+      }
+      .step-num {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--grad);
+        color: #fff;
+        font-size: 20px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+      }
+      .step h4 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .step p {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
 
-/* ---- INTEGRATIONS ---- */
-.integrations{background:#fff}
-.logos-grid{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center}
-.logo-pill{display:flex;align-items:center;gap:8px;background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600;color:var(--muted);transition:all 150ms;cursor:pointer}
-.logo-pill:hover{border-color:var(--sky);color:var(--navy)}
-.logo-dot{width:10px;height:10px;border-radius:50%}
+      /* ---- INTEGRATIONS ---- */
+      .integrations {
+        background: #fff;
+      }
+      .logos-grid {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo-pill {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #f8fafc;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 10px 18px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--muted);
+        transition: all 150ms;
+        cursor: pointer;
+      }
+      .logo-pill:hover {
+        border-color: var(--sky);
+        color: var(--navy);
+      }
+      .logo-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
 
-/* ---- PRICING ---- */
-.pricing{background:#f8fafc}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
-.price-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;transition:all 200ms}
-.price-card.popular{border:2px solid var(--sky);box-shadow:0 8px 32px rgba(66,153,225,0.15)}
-.price-card .badge{display:inline-block;background:var(--grad);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:16px}
-.price-card .plan{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:8px}
-.price-card .amount{font-size:40px;font-weight:800;color:var(--text);letter-spacing:-1px;line-height:1}
-.price-card .amount span{font-size:16px;font-weight:500;color:var(--muted)}
-.price-card .desc{font-size:13px;color:var(--muted);margin:12px 0 20px;line-height:1.6}
-.price-card .cta-btn{width:100%;padding:12px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;transition:all 150ms;margin-bottom:20px}
-.price-card .cta-btn.outline{background:transparent;border:1.5px solid var(--border);color:var(--navy)}
-.price-card .cta-btn.filled{background:var(--grad);border:none;color:#fff}
-.price-card .cta-btn:hover{opacity:0.85}
-.price-card .features{list-style:none;display:flex;flex-direction:column;gap:8px}
-.price-card .features li{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}
+      /* ---- PRICING ---- */
+      .pricing {
+        background: #f8fafc;
+      }
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: start;
+      }
+      .price-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 28px;
+        transition: all 200ms;
+      }
+      .price-card.popular {
+        border: 2px solid var(--sky);
+        box-shadow: 0 8px 32px rgba(66, 153, 225, 0.15);
+      }
+      .price-card .badge {
+        display: inline-block;
+        background: var(--grad);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 999px;
+        margin-bottom: 16px;
+      }
+      .price-card .plan {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      .price-card .amount {
+        font-size: 40px;
+        font-weight: 800;
+        color: var(--text);
+        letter-spacing: -1px;
+        line-height: 1;
+      }
+      .price-card .amount span {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--muted);
+      }
+      .price-card .desc {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 12px 0 20px;
+        line-height: 1.6;
+      }
+      .price-card .cta-btn {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 150ms;
+        margin-bottom: 20px;
+      }
+      .price-card .cta-btn.outline {
+        background: transparent;
+        border: 1.5px solid var(--border);
+        color: var(--navy);
+      }
+      .price-card .cta-btn.filled {
+        background: var(--grad);
+        border: none;
+        color: #fff;
+      }
+      .price-card .cta-btn:hover {
+        opacity: 0.85;
+      }
+      .price-card .features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .price-card .features li {
+        font-size: 13px;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
 
-/* ---- FAQ ---- */
-.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.faq-item{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:20px}
-.faq-item h4{font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px}
-.faq-item p{font-size:13px;color:var(--muted);line-height:1.6}
+      /* ---- FAQ ---- */
+      .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .faq-item {
+        background: #f8fafc;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+      }
+      .faq-item h4 {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 8px;
+      }
+      .faq-item p {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
 
-/* ---- FINAL CTA ---- */
-.final-cta{background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 50%,var(--sky) 100%);padding:80px 40px;text-align:center;position:relative;overflow:hidden}
-.final-cta::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;background:rgba(0,212,255,0.1);border-radius:50%;pointer-events:none}
-.final-cta::after{content:'';position:absolute;bottom:-80px;left:-40px;width:200px;height:200px;background:rgba(255,255,255,0.05);border-radius:50%;pointer-events:none}
-.final-cta h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:16px;line-height:1.2}
-.final-cta p{font-size:17px;color:rgba(255,255,255,0.75);margin-bottom:32px}
-.final-cta .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-white{padding:14px 28px;background:#fff;color:var(--navy);border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;transition:all 150ms}
-.btn-white:hover{background:rgba(255,255,255,0.9)}
-.btn-outline-white{padding:14px 28px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4);border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;transition:all 150ms}
-.btn-outline-white:hover{border-color:#fff}
+      /* ---- FINAL CTA ---- */
+      .final-cta {
+        background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 50%, var(--sky) 100%);
+        padding: 80px 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .final-cta::before {
+        content: '';
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 240px;
+        height: 240px;
+        background: rgba(0, 212, 255, 0.1);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .final-cta::after {
+        content: '';
+        position: absolute;
+        bottom: -80px;
+        left: -40px;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .final-cta h2 {
+        font-size: clamp(28px, 4vw, 44px);
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -1px;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      .final-cta p {
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 32px;
+      }
+      .final-cta .ctas {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn-white {
+        padding: 14px 28px;
+        background: #fff;
+        color: var(--navy);
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 150ms;
+      }
+      .btn-white:hover {
+        background: rgba(255, 255, 255, 0.9);
+      }
+      .btn-outline-white {
+        padding: 14px 28px;
+        background: transparent;
+        color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 150ms;
+      }
+      .btn-outline-white:hover {
+        border-color: #fff;
+      }
 
-/* ---- FOOTER ---- */
-footer{background:#0a1628;padding:56px 40px 32px;color:rgba(255,255,255,0.6)}
-.footer-inner{max-width:1200px;margin:0 auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
-.footer-brand .logo-text{color:#fff;font-size:20px;font-weight:800;margin-bottom:12px}
-.footer-brand p{font-size:13px;line-height:1.7;color:rgba(255,255,255,0.5);max-width:240px}
-.footer-col h5{font-size:13px;font-weight:700;color:#fff;margin-bottom:14px;letter-spacing:0.5px}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.footer-col ul li a{font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 150ms}
-.footer-col ul li a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
-.footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none}
+      /* ---- FOOTER ---- */
+      footer {
+        background: #0a1628;
+        padding: 56px 40px 32px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+      .footer-brand .logo-text {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+      .footer-brand p {
+        font-size: 13px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.5);
+        max-width: 240px;
+      }
+      .footer-col h5 {
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 14px;
+        letter-spacing: 0.5px;
+      }
+      .footer-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .footer-col ul li a {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: color 150ms;
+      }
+      .footer-col ul li a:hover {
+        color: #fff;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+      }
+      .footer-bottom a {
+        color: rgba(255, 255, 255, 0.4);
+        text-decoration: none;
+      }
 
-/* SVG icons inline */
-.ic{display:inline-block;vertical-align:middle}
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="#" class="logo">
-      <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-        <path d="M20 4 L28 14 L20 20 L12 14Z" fill="#00d4ff"/>
-        <path d="M28 14 L36 26 L20 26 L20 20Z" fill="#4299e1"/>
-        <path d="M20 26 L20 36 L12 26 L20 20Z" fill="#2d5aa0"/>
-        <path d="M12 26 L4 14 L12 14 L20 20Z" fill="#4299e1"/>
-      </svg>
-      <span class="logo-text">syd<span>on</span></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#">Agents</a></li>
-      <li><a href="#">Resources</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <div class="nav-cta">
-      <button class="btn-ghost">Sign In</button>
-      <button class="btn-primary">Start Free</button>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-badge">
-    <span class="hero-badge-dot"></span>
-    10 AI Agents · One Platform · Actually Does the Work
-  </div>
-  <h1>Everything your Amazon<br/>business needs.<br/><span class="grad">One platform.</span></h1>
-  <p class="hero-sub">Product research, listing optimization, PPC management, repricing, account protection, and profit analytics — all running as AI agents that take action, not just alert.</p>
-  <div class="hero-ctas">
-    <button class="btn-primary">Start Free — No Credit Card</button>
-    <button class="btn-ghost">See All 10 Agents →</button>
-  </div>
-  <p class="hero-note">Free Download: The 47-Point Compliance Checklist · No credit card required</p>
-  <div class="hero-tags">
-    <span class="tag">SP-API Compliant</span>
-    <span class="tag">March 2026 Agent Policy</span>
-    <span class="tag">Enterprise-grade Security</span>
-    <span class="tag">Cancel Anytime</span>
-  </div>
-</section>
-
-<!-- AGENTS OVERVIEW -->
-<section class="section agents-overview">
-  <div class="section-inner">
-    <div class="section-header center">
-      <span class="section-label">The Platform</span>
-      <h2 class="section-title">10 agents acting across every layer<br/>of your Amazon business. Right Now.</h2>
-      <p class="section-sub">Every agent talks to the next. Unified intelligence vs. disconnected tools.</p>
-    </div>
-    <div class="agents-grid">
-      <div class="agent-card">
-        <div class="agent-icon" style="background:linear-gradient(135deg,rgba(0,212,255,0.15),rgba(66,153,225,0.15))">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#1a365d" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
-        <h4>Account Guardian</h4>
-        <p>Acts on 47 risk factors automatically</p>
-        <span class="agent-tag" style="background:rgba(0,212,255,0.1);color:#1a365d">Protection</span>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon" style="background:linear-gradient(135deg,rgba(66,153,225,0.15),rgba(45,90,160,0.15))">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#2d5aa0" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        </div>
-        <h4>Product Scout</h4>
-        <p>Discovers winning products 24/7</p>
-        <span class="agent-tag" style="background:rgba(45,90,160,0.1);color:#2d5aa0">Discovery</span>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon" style="background:linear-gradient(135deg,rgba(26,54,93,0.15),rgba(66,153,225,0.1))">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#1a365d" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-        </div>
-        <h4>Listing Builder</h4>
-        <p>AI-optimized titles, bullets & descriptions</p>
-        <span class="agent-tag" style="background:rgba(26,54,93,0.1);color:#1a365d">Optimization</span>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon" style="background:linear-gradient(135deg,rgba(255,153,0,0.1),rgba(249,115,22,0.1))">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#c2410c" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-        </div>
-        <h4>PPC Strategist</h4>
-        <p>Pauses waste, scales winners, defends ACoS</p>
-        <span class="agent-tag" style="background:rgba(255,153,0,0.1);color:#92400e">Action</span>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon" style="background:linear-gradient(135deg,rgba(16,185,129,0.1),rgba(5,150,105,0.1))">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#059669" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-        </div>
-        <h4>Review Guardian</h4>
-        <p>Catches negative patterns before damage</p>
-        <span class="agent-tag" style="background:rgba(16,185,129,0.1);color:#047857">Monitoring</span>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon" style="background:linear-gradient(135deg,rgba(66,153,225,0.15),rgba(0,212,255,0.1))">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#4299e1" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-        </div>
-        <h4>Profit Intelligence</h4>
-        <p>Every dollar in real time</p>
-        <span class="agent-tag" style="background:rgba(66,153,225,0.1);color:#2563eb">Tracking</span>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon" style="background:linear-gradient(135deg,rgba(255,153,0,0.12),rgba(245,101,101,0.08))">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-        </div>
-        <h4>Dynamic Pricer</h4>
-        <p>Wins Buy Box without sacrificing margin</p>
-        <span class="agent-tag" style="background:rgba(255,153,0,0.1);color:#92400e">Defense</span>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon" style="background:linear-gradient(135deg,rgba(45,90,160,0.12),rgba(26,54,93,0.08))">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#1a365d" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-        </div>
-        <h4>Fulfillment Manager</h4>
-        <p>Smart FBA/FBM routing decisions</p>
-        <span class="agent-tag" style="background:rgba(45,90,160,0.1);color:#1a365d">Routing</span>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon" style="background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(66,153,225,0.1))">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#0284c7" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-        </div>
-        <h4>Document Intelligence</h4>
-        <p>Processes compliance docs automatically</p>
-        <span class="agent-tag" style="background:rgba(2,132,199,0.1);color:#0369a1">Processing</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED AGENTS -->
-<section class="section">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="section-label">Spotlight</span>
-      <h2 class="section-title">The agents doing the heavy lifting</h2>
-      <p class="section-sub">A closer look at the three agents Amazon sellers rely on most.</p>
-    </div>
-    <div class="featured-agents">
-      <div class="featured-card" style="border-color:rgba(0,212,255,0.3)">
-        <div class="icon-lg" style="background:linear-gradient(135deg,#00d4ff,#4299e1)">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
-        <h3 style="color:#1a365d">Account Guardian</h3>
-        <p>Acts on 47 risk factors automatically. Never wake up to a suspended account again.</p>
-        <ul>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Account health monitoring 24/7</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Compliance risk scanning</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Automated appeal drafting</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Free forever plan available</li>
-        </ul>
-      </div>
-      <div class="featured-card" style="border-color:rgba(45,90,160,0.3)">
-        <div class="icon-lg" style="background:linear-gradient(135deg,#1a365d,#4299e1)">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-        </div>
-        <h3 style="color:#1a365d">PPC Strategist</h3>
-        <p>Pauses waste, scales winners, defends ACoS. Ad spend that compounds automatically.</p>
-        <ul>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Real-time bid optimization</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Keyword harvesting & negation</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>ACoS target enforcement</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Campaign structure automation</li>
-        </ul>
-      </div>
-      <div class="featured-card" style="border-color:rgba(66,153,225,0.3)">
-        <div class="icon-lg" style="background:linear-gradient(135deg,#2d5aa0,#00d4ff)">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-        </div>
-        <h3 style="color:#1a365d">Profit Intelligence</h3>
-        <p>See every dollar you're making, losing, and leaving on the table. In real time.</p>
-        <ul>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Real-time P&L dashboard</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>QuickBooks sync</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Fee leak detection</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>COGS and margin tracking</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="section steps">
-  <div class="section-inner">
-    <div class="section-header center">
-      <span class="section-label">Setup</span>
-      <h2 class="section-title">Setup takes minutes</h2>
-      <p class="section-sub">Connect once. Let the agents run.</p>
-    </div>
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h4>Connect your Amazon account</h4>
-        <p>SP-API connection with enterprise-grade security. Read your Seller Central data — nothing more.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h4>Agents scan your full catalog</h4>
-        <p>All 10 agents automatically analyze your listings, ads, pricing, and account health metrics.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h4>You approve. Agents execute.</h4>
-        <p>Review agent-recommended actions in your dashboard. Approve once — or set automated rules.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INTEGRATIONS -->
-<section class="section integrations">
-  <div class="section-inner">
-    <div class="section-header center">
-      <span class="section-label">Integrations</span>
-      <h2 class="section-title">Connects to your entire stack</h2>
-      <p class="section-sub">Native integrations with the tools Amazon sellers already use.</p>
-    </div>
-    <div class="logos-grid">
-      <div class="logo-pill"><span class="logo-dot" style="background:#ff9900"></span>Amazon</div>
-      <div class="logo-pill"><span class="logo-dot" style="background:#2ca01c"></span>QuickBooks</div>
-      <div class="logo-pill"><span class="logo-dot" style="background:#4285f4"></span>Google</div>
-      <div class="logo-pill"><span class="logo-dot" style="background:#006bcc"></span>ShipStation</div>
-      <div class="logo-pill"><span class="logo-dot" style="background:#635bff"></span>Stripe</div>
-      <div class="logo-pill"><span class="logo-dot" style="background:#f26622"></span>Klaviyo</div>
-      <div class="logo-pill"><span class="logo-dot" style="background:#ff7a59"></span>HubSpot</div>
-      <div class="logo-pill"><span class="logo-dot" style="background:#e57200"></span>Keepa</div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section pricing">
-  <div class="section-inner">
-    <div class="section-header center">
-      <span class="section-label">Pricing</span>
-      <h2 class="section-title">Start free. Scale as you grow.</h2>
-      <p class="section-sub">All plans use Amazon's SP-API, compliant with March 2026 Agent Policy.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="price-card">
-        <p class="plan">Free</p>
-        <div class="amount">$0<span>/mo</span></div>
-        <p class="desc">Account protection for every Amazon seller. Free forever, no credit card.</p>
-        <button class="cta-btn outline">Start Free — No Credit Card</button>
-        <ul class="features">
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Account Guardian agent</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>47-point risk scanning</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>SP-API connection</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Compliance checks</li>
-        </ul>
-      </div>
-      <div class="price-card popular">
-        <span class="badge">Most Popular</span>
-        <p class="plan">Individual</p>
-        <div class="amount">$149<span>/mo</span></div>
-        <p class="desc">All 10 agents for independent Amazon sellers running their own business.</p>
-        <button class="cta-btn filled">Start Free Trial</button>
-        <ul class="features">
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>All 10 agents</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Full platform access</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Automated actions with approval</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Priority support</li>
-        </ul>
-      </div>
-      <div class="price-card">
-        <p class="plan">Agency</p>
-        <div class="amount">$699<span>/mo</span></div>
-        <p class="desc">Up to 20 accounts. $1,199/mo for up to 50 accounts. For agencies managing multiple sellers.</p>
-        <button class="cta-btn outline">Talk to Us — Schedule a Call</button>
-        <ul class="features">
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>All 10 agents per account</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Unified multi-account dashboard</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Client-level reporting</li>
-          <li><span class="check"><svg width="8" height="8" viewBox="0 0 10 10"><polyline points="1,5 4,8 9,2" fill="none" stroke="#10b981" stroke-width="2"/></svg></span>Dedicated onboarding</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section">
-  <div class="section-inner">
-    <div class="section-header center">
-      <span class="section-label">FAQ</span>
-      <h2 class="section-title">Common questions</h2>
-    </div>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h4>How is Sydon AI different from Helium 10 or Keepa?</h4>
-        <p>Helium 10 and Keepa are research tools — they surface data and wait for you to act. Sydon AI is an action platform: agents monitor, decide, and execute on your behalf, with your approval.</p>
-      </div>
-      <div class="faq-item">
-        <h4>How quickly will I see results?</h4>
-        <p>Most sellers see measurable impact within the first 2 weeks. PPC optimization and account protection begin working immediately after your first catalog scan.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What data does Sydon AI access?</h4>
-        <p>Only the business data you see in your Amazon Seller Central Dashboard via the SP-API. No personal information, no unapproved listing changes.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Can I use Sydon AI alongside my existing tools?</h4>
-        <p>Yes. Sydon AI integrates with QuickBooks, HubSpot, Klaviyo, ShipStation, and more. You don't need to replace your current stack.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What happens to my data if I cancel?</h4>
-        <p>Your data is yours. Export everything before cancellation — we provide a full data export on any plan.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Is Sydon AI suitable for smaller sellers?</h4>
-        <p>Absolutely. The free Account Guardian plan is designed for sellers at every stage. Individual plan scales from $5K to $5M+ monthly revenue.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div style="position:relative;z-index:1;max-width:640px;margin:0 auto">
-    <h2>Stop managing your Amazon business.<br/>Let the agents run it.</h2>
-    <p>Start free. No credit card. No sales call. Cancel anytime.</p>
-    <div class="ctas">
-      <button class="btn-white">Start Free — Account Guardian</button>
-      <button class="btn-outline-white">Download 47-Point Checklist</button>
-    </div>
-    <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:16px">Compliant with Amazon SP-API · March 2026 Agent Policy</p>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-          <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
-            <path d="M20 4 L28 14 L20 20 L12 14Z" fill="#00d4ff"/>
-            <path d="M28 14 L36 26 L20 26 L20 20Z" fill="#4299e1"/>
-            <path d="M20 26 L20 36 L12 26 L20 20Z" fill="#2d5aa0"/>
-            <path d="M12 26 L4 14 L12 14 L20 20Z" fill="#4299e1"/>
+      /* SVG icons inline */
+      .ic {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#" class="logo">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+            <path d="M20 4 L28 14 L20 20 L12 14Z" fill="#00d4ff" />
+            <path d="M28 14 L36 26 L20 26 L20 20Z" fill="#4299e1" />
+            <path d="M20 26 L20 36 L12 26 L20 20Z" fill="#2d5aa0" />
+            <path d="M12 26 L4 14 L12 14 L20 20Z" fill="#4299e1" />
           </svg>
-          <span class="logo-text">sydon</span>
-        </div>
-        <p>10 AI agents acting across every layer of your Amazon business. Right now.</p>
-        <p style="margin-top:12px;font-size:12px">📞 1-877-303-5508</p>
-      </div>
-      <div class="footer-col">
-        <h5>Platform</h5>
-        <ul>
-          <li><a href="#">Home</a></li>
+          <span class="logo-text">syd<span>on</span></span>
+        </a>
+        <ul class="nav-links">
           <li><a href="#">Agents</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Pricing</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+        <div class="nav-cta">
+          <button class="btn-ghost">Sign In</button>
+          <button class="btn-primary">Start Free</button>
+        </div>
       </div>
-      <div class="footer-col">
-        <h5>Resources</h5>
-        <ul>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Account Protection</a></li>
-          <li><a href="#">Insights</a></li>
-          <li><a href="#">News</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Support</h5>
-        <ul>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 SydonAI. All rights reserved.</span>
-      <div style="display:flex;gap:16px">
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Facebook</a>
-        <a href="#">X / Twitter</a>
-      </div>
-    </div>
-  </div>
-</footer>
+    </nav>
 
-</body>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        10 AI Agents · One Platform · Actually Does the Work
+      </div>
+      <h1>
+        Everything your Amazon<br />business needs.<br /><span class="grad">One platform.</span>
+      </h1>
+      <p class="hero-sub">
+        Product research, listing optimization, PPC management, repricing, account protection, and
+        profit analytics — all running as AI agents that take action, not just alert.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn-primary">Start Free — No Credit Card</button>
+        <button class="btn-ghost">See All 10 Agents →</button>
+      </div>
+      <p class="hero-note">
+        Free Download: The 47-Point Compliance Checklist · No credit card required
+      </p>
+      <div class="hero-tags">
+        <span class="tag">SP-API Compliant</span>
+        <span class="tag">March 2026 Agent Policy</span>
+        <span class="tag">Enterprise-grade Security</span>
+        <span class="tag">Cancel Anytime</span>
+      </div>
+    </section>
+
+    <!-- AGENTS OVERVIEW -->
+    <section class="section agents-overview">
+      <div class="section-inner">
+        <div class="section-header center">
+          <span class="section-label">The Platform</span>
+          <h2 class="section-title">
+            10 agents acting across every layer<br />of your Amazon business. Right Now.
+          </h2>
+          <p class="section-sub">
+            Every agent talks to the next. Unified intelligence vs. disconnected tools.
+          </p>
+        </div>
+        <div class="agents-grid">
+          <div class="agent-card">
+            <div
+              class="agent-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(0, 212, 255, 0.15),
+                  rgba(66, 153, 225, 0.15)
+                );
+              "
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#1a365d"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <h4>Account Guardian</h4>
+            <p>Acts on 47 risk factors automatically</p>
+            <span class="agent-tag" style="background: rgba(0, 212, 255, 0.1); color: #1a365d"
+              >Protection</span
+            >
+          </div>
+          <div class="agent-card">
+            <div
+              class="agent-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(66, 153, 225, 0.15),
+                  rgba(45, 90, 160, 0.15)
+                );
+              "
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#2d5aa0"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+            <h4>Product Scout</h4>
+            <p>Discovers winning products 24/7</p>
+            <span class="agent-tag" style="background: rgba(45, 90, 160, 0.1); color: #2d5aa0"
+              >Discovery</span
+            >
+          </div>
+          <div class="agent-card">
+            <div
+              class="agent-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(26, 54, 93, 0.15),
+                  rgba(66, 153, 225, 0.1)
+                );
+              "
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#1a365d"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                />
+              </svg>
+            </div>
+            <h4>Listing Builder</h4>
+            <p>AI-optimized titles, bullets & descriptions</p>
+            <span class="agent-tag" style="background: rgba(26, 54, 93, 0.1); color: #1a365d"
+              >Optimization</span
+            >
+          </div>
+          <div class="agent-card">
+            <div
+              class="agent-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(255, 153, 0, 0.1),
+                  rgba(249, 115, 22, 0.1)
+                );
+              "
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#c2410c"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                />
+              </svg>
+            </div>
+            <h4>PPC Strategist</h4>
+            <p>Pauses waste, scales winners, defends ACoS</p>
+            <span class="agent-tag" style="background: rgba(255, 153, 0, 0.1); color: #92400e"
+              >Action</span
+            >
+          </div>
+          <div class="agent-card">
+            <div
+              class="agent-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(16, 185, 129, 0.1),
+                  rgba(5, 150, 105, 0.1)
+                );
+              "
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#059669"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </div>
+            <h4>Review Guardian</h4>
+            <p>Catches negative patterns before damage</p>
+            <span class="agent-tag" style="background: rgba(16, 185, 129, 0.1); color: #047857"
+              >Monitoring</span
+            >
+          </div>
+          <div class="agent-card">
+            <div
+              class="agent-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(66, 153, 225, 0.15),
+                  rgba(0, 212, 255, 0.1)
+                );
+              "
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#4299e1"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+              </svg>
+            </div>
+            <h4>Profit Intelligence</h4>
+            <p>Every dollar in real time</p>
+            <span class="agent-tag" style="background: rgba(66, 153, 225, 0.1); color: #2563eb"
+              >Tracking</span
+            >
+          </div>
+          <div class="agent-card">
+            <div
+              class="agent-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(255, 153, 0, 0.12),
+                  rgba(245, 101, 101, 0.08)
+                );
+              "
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#d97706"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                />
+              </svg>
+            </div>
+            <h4>Dynamic Pricer</h4>
+            <p>Wins Buy Box without sacrificing margin</p>
+            <span class="agent-tag" style="background: rgba(255, 153, 0, 0.1); color: #92400e"
+              >Defense</span
+            >
+          </div>
+          <div class="agent-card">
+            <div
+              class="agent-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(45, 90, 160, 0.12),
+                  rgba(26, 54, 93, 0.08)
+                );
+              "
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#1a365d"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                />
+              </svg>
+            </div>
+            <h4>Fulfillment Manager</h4>
+            <p>Smart FBA/FBM routing decisions</p>
+            <span class="agent-tag" style="background: rgba(45, 90, 160, 0.1); color: #1a365d"
+              >Routing</span
+            >
+          </div>
+          <div class="agent-card">
+            <div
+              class="agent-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(0, 212, 255, 0.1),
+                  rgba(66, 153, 225, 0.1)
+                );
+              "
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#0284c7"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+            </div>
+            <h4>Document Intelligence</h4>
+            <p>Processes compliance docs automatically</p>
+            <span class="agent-tag" style="background: rgba(2, 132, 199, 0.1); color: #0369a1"
+              >Processing</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED AGENTS -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">Spotlight</span>
+          <h2 class="section-title">The agents doing the heavy lifting</h2>
+          <p class="section-sub">A closer look at the three agents Amazon sellers rely on most.</p>
+        </div>
+        <div class="featured-agents">
+          <div class="featured-card" style="border-color: rgba(0, 212, 255, 0.3)">
+            <div class="icon-lg" style="background: linear-gradient(135deg, #00d4ff, #4299e1)">
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#fff"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <h3 style="color: #1a365d">Account Guardian</h3>
+            <p>
+              Acts on 47 risk factors automatically. Never wake up to a suspended account again.
+            </p>
+            <ul>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Account health monitoring 24/7
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Compliance risk scanning
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Automated appeal drafting
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Free forever plan available
+              </li>
+            </ul>
+          </div>
+          <div class="featured-card" style="border-color: rgba(45, 90, 160, 0.3)">
+            <div class="icon-lg" style="background: linear-gradient(135deg, #1a365d, #4299e1)">
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#fff"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                />
+              </svg>
+            </div>
+            <h3 style="color: #1a365d">PPC Strategist</h3>
+            <p>
+              Pauses waste, scales winners, defends ACoS. Ad spend that compounds automatically.
+            </p>
+            <ul>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Real-time bid optimization
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Keyword harvesting & negation
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >ACoS target enforcement
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Campaign structure automation
+              </li>
+            </ul>
+          </div>
+          <div class="featured-card" style="border-color: rgba(66, 153, 225, 0.3)">
+            <div class="icon-lg" style="background: linear-gradient(135deg, #2d5aa0, #00d4ff)">
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#fff"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+              </svg>
+            </div>
+            <h3 style="color: #1a365d">Profit Intelligence</h3>
+            <p>See every dollar you're making, losing, and leaving on the table. In real time.</p>
+            <ul>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Real-time P&L dashboard
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >QuickBooks sync
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Fee leak detection
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >COGS and margin tracking
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section steps">
+      <div class="section-inner">
+        <div class="section-header center">
+          <span class="section-label">Setup</span>
+          <h2 class="section-title">Setup takes minutes</h2>
+          <p class="section-sub">Connect once. Let the agents run.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h4>Connect your Amazon account</h4>
+            <p>
+              SP-API connection with enterprise-grade security. Read your Seller Central data —
+              nothing more.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h4>Agents scan your full catalog</h4>
+            <p>
+              All 10 agents automatically analyze your listings, ads, pricing, and account health
+              metrics.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h4>You approve. Agents execute.</h4>
+            <p>
+              Review agent-recommended actions in your dashboard. Approve once — or set automated
+              rules.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEGRATIONS -->
+    <section class="section integrations">
+      <div class="section-inner">
+        <div class="section-header center">
+          <span class="section-label">Integrations</span>
+          <h2 class="section-title">Connects to your entire stack</h2>
+          <p class="section-sub">Native integrations with the tools Amazon sellers already use.</p>
+        </div>
+        <div class="logos-grid">
+          <div class="logo-pill">
+            <span class="logo-dot" style="background: #ff9900"></span>Amazon
+          </div>
+          <div class="logo-pill">
+            <span class="logo-dot" style="background: #2ca01c"></span>QuickBooks
+          </div>
+          <div class="logo-pill">
+            <span class="logo-dot" style="background: #4285f4"></span>Google
+          </div>
+          <div class="logo-pill">
+            <span class="logo-dot" style="background: #006bcc"></span>ShipStation
+          </div>
+          <div class="logo-pill">
+            <span class="logo-dot" style="background: #635bff"></span>Stripe
+          </div>
+          <div class="logo-pill">
+            <span class="logo-dot" style="background: #f26622"></span>Klaviyo
+          </div>
+          <div class="logo-pill">
+            <span class="logo-dot" style="background: #ff7a59"></span>HubSpot
+          </div>
+          <div class="logo-pill">
+            <span class="logo-dot" style="background: #e57200"></span>Keepa
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section pricing">
+      <div class="section-inner">
+        <div class="section-header center">
+          <span class="section-label">Pricing</span>
+          <h2 class="section-title">Start free. Scale as you grow.</h2>
+          <p class="section-sub">
+            All plans use Amazon's SP-API, compliant with March 2026 Agent Policy.
+          </p>
+        </div>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <p class="plan">Free</p>
+            <div class="amount">$0<span>/mo</span></div>
+            <p class="desc">
+              Account protection for every Amazon seller. Free forever, no credit card.
+            </p>
+            <button class="cta-btn outline">Start Free — No Credit Card</button>
+            <ul class="features">
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Account Guardian agent
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >47-point risk scanning
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >SP-API connection
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Compliance checks
+              </li>
+            </ul>
+          </div>
+          <div class="price-card popular">
+            <span class="badge">Most Popular</span>
+            <p class="plan">Individual</p>
+            <div class="amount">$149<span>/mo</span></div>
+            <p class="desc">
+              All 10 agents for independent Amazon sellers running their own business.
+            </p>
+            <button class="cta-btn filled">Start Free Trial</button>
+            <ul class="features">
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >All 10 agents
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Full platform access
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Automated actions with approval
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Priority support
+              </li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <p class="plan">Agency</p>
+            <div class="amount">$699<span>/mo</span></div>
+            <p class="desc">
+              Up to 20 accounts. $1,199/mo for up to 50 accounts. For agencies managing multiple
+              sellers.
+            </p>
+            <button class="cta-btn outline">Talk to Us — Schedule a Call</button>
+            <ul class="features">
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >All 10 agents per account
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Unified multi-account dashboard
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Client-level reporting
+              </li>
+              <li>
+                <span class="check"
+                  ><svg width="8" height="8" viewBox="0 0 10 10">
+                    <polyline
+                      points="1,5 4,8 9,2"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                    /></svg></span
+                >Dedicated onboarding
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header center">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Common questions</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>How is Sydon AI different from Helium 10 or Keepa?</h4>
+            <p>
+              Helium 10 and Keepa are research tools — they surface data and wait for you to act.
+              Sydon AI is an action platform: agents monitor, decide, and execute on your behalf,
+              with your approval.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4>How quickly will I see results?</h4>
+            <p>
+              Most sellers see measurable impact within the first 2 weeks. PPC optimization and
+              account protection begin working immediately after your first catalog scan.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4>What data does Sydon AI access?</h4>
+            <p>
+              Only the business data you see in your Amazon Seller Central Dashboard via the SP-API.
+              No personal information, no unapproved listing changes.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4>Can I use Sydon AI alongside my existing tools?</h4>
+            <p>
+              Yes. Sydon AI integrates with QuickBooks, HubSpot, Klaviyo, ShipStation, and more. You
+              don't need to replace your current stack.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4>What happens to my data if I cancel?</h4>
+            <p>
+              Your data is yours. Export everything before cancellation — we provide a full data
+              export on any plan.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4>Is Sydon AI suitable for smaller sellers?</h4>
+            <p>
+              Absolutely. The free Account Guardian plan is designed for sellers at every stage.
+              Individual plan scales from $5K to $5M+ monthly revenue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div style="position: relative; z-index: 1; max-width: 640px; margin: 0 auto">
+        <h2>Stop managing your Amazon business.<br />Let the agents run it.</h2>
+        <p>Start free. No credit card. No sales call. Cancel anytime.</p>
+        <div class="ctas">
+          <button class="btn-white">Start Free — Account Guardian</button>
+          <button class="btn-outline-white">Download 47-Point Checklist</button>
+        </div>
+        <p style="color: rgba(255, 255, 255, 0.4); font-size: 12px; margin-top: 16px">
+          Compliant with Amazon SP-API · March 2026 Agent Policy
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px">
+              <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+                <path d="M20 4 L28 14 L20 20 L12 14Z" fill="#00d4ff" />
+                <path d="M28 14 L36 26 L20 26 L20 20Z" fill="#4299e1" />
+                <path d="M20 26 L20 36 L12 26 L20 20Z" fill="#2d5aa0" />
+                <path d="M12 26 L4 14 L12 14 L20 20Z" fill="#4299e1" />
+              </svg>
+              <span class="logo-text">sydon</span>
+            </div>
+            <p>10 AI agents acting across every layer of your Amazon business. Right now.</p>
+            <p style="margin-top: 12px; font-size: 12px">📞 1-877-303-5508</p>
+          </div>
+          <div class="footer-col">
+            <h5>Platform</h5>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Agents</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Resources</h5>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Account Protection</a></li>
+              <li><a href="#">Insights</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Support</h5>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 SydonAI. All rights reserved.</span>
+          <div style="display: flex; gap: 16px">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+            <a href="#">X / Twitter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
