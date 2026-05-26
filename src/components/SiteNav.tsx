@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import ThemeToggle from '@/components/ThemeToggle';
 import '@/styles/landing.css';
 
 export default function SiteNav() {
@@ -52,6 +53,7 @@ export default function SiteNav() {
           <Link href="/about-us">About</Link>
         </div>
         <div className="nav-cta">
+          <ThemeToggle />
           <a href="https://go.sydon.ai/nova" className="btn btn-ghost btn-sm">
             Sign in
           </a>
@@ -59,56 +61,93 @@ export default function SiteNav() {
             Start free →
           </a>
         </div>
-        <button
-          className="nav-hamburger"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          onClick={() =>{  setMenuOpen((o) => !o); }}
-        >
-          {menuOpen ? (
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          ) : (
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <line x1="3" y1="8" x2="21" y2="8" />
-              <line x1="3" y1="16" x2="21" y2="16" />
-            </svg>
-          )}
-        </button>
+        <div className="nav-mobile-right">
+          <ThemeToggle />
+          <button
+            className="nav-hamburger"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            onClick={() => {
+              setMenuOpen((o) => !o);
+            }}
+          >
+            {menuOpen ? (
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            ) : (
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <line x1="3" y1="8" x2="21" y2="8" />
+                <line x1="3" y1="16" x2="21" y2="16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </nav>
 
-      {menuOpen && <div className="nav-mobile-overlay" onClick={() =>{  setMenuOpen(false); }} />}
+      {menuOpen && (
+        <div
+          className="nav-mobile-overlay"
+          onClick={() => {
+            setMenuOpen(false);
+          }}
+        />
+      )}
       <div className={`nav-mobile${menuOpen ? ' open' : ''}`}>
         <div className="nav-mobile-links">
-          <Link href="/solutions" onClick={() =>{  setMenuOpen(false); }}>
+          <Link
+            href="/solutions"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             Solutions
           </Link>
-          <Link href="/resources" onClick={() =>{  setMenuOpen(false); }}>
+          <Link
+            href="/resources"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             Resources
           </Link>
-          <Link href="/enterprises" onClick={() =>{  setMenuOpen(false); }}>
+          <Link
+            href="/enterprises"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             Enterprise
           </Link>
-          <Link href="/customer-stories" onClick={() =>{  setMenuOpen(false); }}>
+          <Link
+            href="/customer-stories"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             Customers
           </Link>
-          <Link href="/about-us" onClick={() =>{  setMenuOpen(false); }}>
+          <Link
+            href="/about-us"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             About
           </Link>
         </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import ThemeToggle from '@/components/ThemeToggle';
 import '@/styles/landing.css';
 
 type PricingPeriod = 'monthly' | 'annual';
@@ -174,6 +175,7 @@ export default function LandingPage() {
           <a href="#faq">FAQ</a>
         </div>
         <div className="nav-cta">
+          <ThemeToggle />
           <a href="#" className="btn btn-ghost btn-sm">
             Sign in
           </a>
