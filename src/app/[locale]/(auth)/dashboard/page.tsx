@@ -21,26 +21,52 @@ export default async function DashboardPage({ params }: Props) {
   }
 
   const user = JSON.parse(userDataCookie) as unknown as { id: string; name: string; email: string };
+  const initials = user.name
+    .split(' ')
+    .map((n) => n[0])
+    .slice(0, 2)
+    .join('')
+    .toUpperCase();
 
   return (
-    <main className="mx-auto max-w-4xl p-8">
-      <h1 className="mb-6 text-2xl font-bold text-gray-900">Dashboard</h1>
-
-      <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="mb-4 text-lg font-semibold text-gray-700">Welcome back</h2>
-        <div className="space-y-2 text-gray-600">
-          <p>
-            <span className="font-medium">Name:</span> {user.name}
-          </p>
-          <p>
-            <span className="font-medium">Email:</span> {user.email}
-          </p>
-          <p>
-            <span className="font-medium">User ID:</span>{' '}
-            <span className="font-mono text-sm">{user.id}</span>
-          </p>
+    <div className="space-y-6">
+      <div className="flex items-center gap-4">
+        <div className="flex size-12 items-center justify-center rounded-full bg-cyan-600 text-sm font-bold text-white">
+          {initials}
+        </div>
+        <div>
+          <h1 className="text-xl font-bold text-cyan-900">
+            Welcome back, {user.name.split(' ')[0]}
+          </h1>
+          <p className="text-sm text-cyan-700">Here&apos;s your account overview</p>
         </div>
       </div>
-    </main>
+
+      <div className="rounded-xl border border-cyan-100 bg-white p-6 shadow-sm">
+        <h2 className="mb-4 text-xs font-semibold tracking-wider text-cyan-600 uppercase">
+          Account details
+        </h2>
+        <dl className="space-y-3">
+          <div className="flex items-center gap-4">
+            <dt className="w-16 shrink-0 text-xs font-medium tracking-wide text-cyan-500 uppercase">
+              Name
+            </dt>
+            <dd className="text-sm font-medium text-cyan-900">{user.name}</dd>
+          </div>
+          <div className="flex items-center gap-4">
+            <dt className="w-16 shrink-0 text-xs font-medium tracking-wide text-cyan-500 uppercase">
+              Email
+            </dt>
+            <dd className="text-sm text-cyan-900">{user.email}</dd>
+          </div>
+          <div className="flex items-center gap-4">
+            <dt className="w-16 shrink-0 text-xs font-medium tracking-wide text-cyan-500 uppercase">
+              ID
+            </dt>
+            <dd className="font-mono text-xs text-cyan-700">{user.id}</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
   );
 }

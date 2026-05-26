@@ -5,23 +5,23 @@ export const BaseTemplate = (props: {
   rightNav?: React.ReactNode;
   children: React.ReactNode;
 }) => (
-  <div className="w-full px-1 text-gray-700 antialiased">
-    <div className="mx-auto max-w-4xl">
-      <header className="border-b border-gray-300">
+  <div className="min-h-screen bg-cyan-50 antialiased">
+    <div className="mx-auto max-w-5xl px-4">
+      <header className="border-b border-cyan-100">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-8">
-            <h1 className="text-xl font-bold text-gray-900">{AppConfig.name}</h1>
+            <span className="text-lg font-bold text-cyan-700">{AppConfig.name}</span>
             <nav>
-              <ul className="flex flex-wrap gap-x-5 text-base">{props.leftNav}</ul>
+              <ul className="flex flex-wrap gap-x-5 text-sm font-medium">{props.leftNav}</ul>
             </nav>
           </div>
           <nav>
-            <ul className="flex flex-wrap gap-x-5 text-base">{props.rightNav}</ul>
+            <ul className="flex flex-wrap gap-x-5 text-sm font-medium">{props.rightNav}</ul>
           </nav>
         </div>
       </header>
 
-      <main>{props.children}</main>
+      <main className="py-8">{props.children}</main>
     </div>
   </div>
 );
