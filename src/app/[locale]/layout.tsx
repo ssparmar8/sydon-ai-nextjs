@@ -3,6 +3,7 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { Fraunces, Inter_Tight, JetBrains_Mono, Plus_Jakarta_Sans } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import ThemeProvider from '@/components/ThemeProvider';
 import { routing } from '@/libs/I18nRouting';
 import '@/styles/global.css';
 
@@ -84,9 +85,12 @@ export default async function RootLayout(props: {
     <html
       lang={locale}
       className={`${fraunces.variable} ${interTight.variable} ${jetbrainsMono.variable} ${plusJakartaSans.className}`}
+      suppressHydrationWarning
     >
       <body>
-        <NextIntlClientProvider>{props.children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <ThemeProvider>{props.children}</ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
